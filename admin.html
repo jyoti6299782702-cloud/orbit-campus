@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Orbit Campus Admin</title>
+
+<link rel="stylesheet" href="css/admin.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="sidebar">
+
+<h2>Orbit Campus</h2>
+
+<ul>
+
+<li><a href="dashboard.html"><i class="fa-solid fa-chart-line"></i> Dashboard</a></li>
+
+<li><a href="report.html"><i class="fa-solid fa-file-circle-plus"></i> Report</a></li>
+
+<li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+
+</ul>
+
+</div>
+
+<div class="main">
+
+<h1>Admin Panel</h1>
+
+<div class="cards">
+
+<div class="card total">
+<h3>Total</h3>
+<h1 id="total">0</h1>
+</div>
+
+<div class="card pending">
+<h3>Pending</h3>
+<h1 id="pending">0</h1>
+</div>
+
+<div class="card resolved">
+<h3>Resolved</h3>
+<h1 id="resolved">0</h1>
+</div>
+
+</div>
+
+<div class="table-box">
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Name</th>
+
+<th>Category</th>
+
+<th>Priority</th>
+
+<th>Status</th>
+
+<th>Action</th>
+
+</tr>
+
+</thead>
+
+<tbody id="adminTable">
+
+</tbody>
+
+</table>
+
+</div>
+
+</div>
+
+<script src="js/admin.js"></script>
+
+</body>
+</html>

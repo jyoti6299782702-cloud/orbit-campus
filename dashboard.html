@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Orbit Campus Dashboard</title>
+
+<link rel="stylesheet" href="css/dashboard.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<header>
+
+<h2>Orbit Campus Dashboard</h2>
+
+<a href="index.html">Home</a>
+<div class="cards">
+
+    <div class="card total">
+        <i class="fa-solid fa-file-circle-exclamation"></i>
+        <h3>Total Complaints</h3>
+        <h1 id="totalComplaints">0</h1>
+    </div>
+
+    <div class="card pending">
+        <i class="fa-solid fa-clock"></i>
+        <h3>Pending</h3>
+        <h1 id="pendingComplaints">0</h1>
+    </div>
+
+    <div class="card resolved">
+        <i class="fa-solid fa-circle-check"></i>
+        <h3>Resolved</h3>
+        <h1 id="resolvedComplaints">0</h1>
+    </div>
+
+</div>
+
+<div class="table-container">
+
+    <input
+        type="text"
+        id="search"
+        placeholder="Search Complaint...">
+
+    <table>
+
+        <thead>
+
+            <tr>
+
+                <th>Name</th>
+
+                <th>Category</th>
+
+                <th>Priority</th>
+
+                <th>Status</th>
+
+            </tr>
+
+        </thead>
+
+        <tbody id="complaintTable">
+
+        </tbody>
+
+    </table>
+
+</div>
+
+<script src="js/dashboard.js"></script>
+
+</body>
+</html>
