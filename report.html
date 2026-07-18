@@ -1,89 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Report Complaint | Orbit Campus</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Report Complaint | Orbit Campus</title>
 
-    <link rel="stylesheet" href="css/report.css">
+<link rel="stylesheet" href="css/report.css">
 
-    <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
 </head>
 <body>
 
 <div class="container">
 
-    <div class="report-box">
+<div class="report-box">
 
-        <h1>Report an Issue</h1>
-        <p>Submit your campus complaint below.</p>
+<h1><i class="fa-solid fa-circle-exclamation"></i> Report Complaint</h1>
 
-        <form id="reportForm">
+<p>Fill all the details carefully.</p>
 
-            <input
-            type="text"
-            id="name"
-            placeholder="Student Name"
-            required>
+<form id="reportForm">
 
-            <input
-            type="text"
-            id="roll"
-            placeholder="Roll Number"
-            required>
+<h3>Student Information</h3>
 
-            <input
-            type="text"
-            id="department"
-            placeholder="Department"
-            required>
+<input type="text" id="name" placeholder="Student Name" required>
 
-            <select id="category" required>
+<input type="text" id="roll" placeholder="Roll Number" required>
 
-                <option value="">Select Category</option>
+<input type="email" id="email" placeholder="Email Address" required>
 
-                <option>WiFi</option>
+<input type="tel" id="phone" placeholder="Phone Number" required>
 
-                <option>Library</option>
+<h3>Academic Details</h3>
 
-                <option>Laboratory</option>
+<input type="text" id="department" placeholder="Department" required>
 
-                <option>Classroom</option>
+<select id="semester" required>
+<option value="">Select Semester</option>
+<option>1</option>
+<option>2</option>
+<option>3</option>
+<option>4</option>
+<option>5</option>
+<option>6</option>
+</select>
 
-                <option>Hostel</option>
+<h3>Complaint Details</h3>
 
-                <option>General</option>
+<select id="category" required>
+<option value="">Select Category</option>
+<option>WiFi</option>
+<option>Library</option>
+<option>Laboratory</option>
+<option>Classroom</option>
+<option>Hostel</option>
+<option>Electricity</option>
+<option>Water</option>
+<option>Cleaning</option>
+<option>Other</option>
+</select>
 
-            </select>
+<input type="text" id="building" placeholder="Building Name">
 
-            <select id="priority">
+<input type="text" id="room" placeholder="Room Number">
 
-                <option>Low</option>
+<select id="priority" required>
+<option>Low</option>
+<option>Medium</option>
+<option>High</option>
+</select>
 
-                <option>Medium</option>
+<textarea id="description" rows="5"
+placeholder="Describe your complaint..." required></textarea>
 
-                <option>High</option>
+<label>Upload Image (Optional)</label>
+<input type="file" id="image" accept="image/*">
 
-            </select>
+<button type="submit">
+<i class="fa-solid fa-paper-plane"></i>
+Submit Complaint
+</button>
 
-            <textarea
-            id="description"
-            placeholder="Describe your issue..."
-            rows="5"
-            required></textarea>
-
-            <button type="submit">
-                Submit Complaint
-            </button>
-
-        </form>
-
-    </div>
+</form>
 
 </div>
 
+</div>
+
+<script src="js/auth.js"></script>
 <script src="js/report.js"></script>
 
 </body>

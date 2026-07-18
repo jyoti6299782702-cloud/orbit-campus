@@ -1,29 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orbit Campus Dashboard</title>
 
-<meta charset="UTF-8">
+    <link rel="stylesheet" href="css/dashboard.css">
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Orbit Campus Dashboard</title>
-
-<link rel="stylesheet" href="css/dashboard.css">
-
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
 </head>
-
 <body>
 
-<header>
+<header class="header">
+    <h2><i class="fa-solid fa-graduation-cap"></i> Orbit Campus Dashboard</h2>
 
-<h2>Orbit Campus Dashboard</h2>
+    <nav>
+        <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+        <a href="report.html"><i class="fa-solid fa-plus"></i> New Complaint</a>
+        <a href="#" onclick="logout()">
+    <i class="fa-solid fa-right-from-bracket"></i> Logout
+</a>
+    </nav>
+</header>
 
-<a href="index.html">Home</a>
-<div class="cards">
+<!-- Statistics Cards -->
+
+<section class="cards">
 
     <div class="card total">
         <i class="fa-solid fa-file-circle-exclamation"></i>
@@ -37,48 +41,118 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         <h1 id="pendingComplaints">0</h1>
     </div>
 
+    <div class="card progress">
+        <i class="fa-solid fa-spinner"></i>
+        <h3>In Progress</h3>
+        <h1 id="progressComplaints">0</h1>
+    </div>
+
     <div class="card resolved">
         <i class="fa-solid fa-circle-check"></i>
         <h3>Resolved</h3>
         <h1 id="resolvedComplaints">0</h1>
     </div>
 
-</div>
+    <div class="card high">
+        <i class="fa-solid fa-triangle-exclamation"></i>
+        <h3>High Priority</h3>
+        <h1 id="highComplaints">0</h1>
+    </div>
 
-<div class="table-container">
+</section>
+
+<!-- Search & Filter -->
+
+<section class="filters">
 
     <input
         type="text"
         id="search"
-        placeholder="Search Complaint...">
+        placeholder="🔍 Search by Name / Roll / Complaint ID">
 
-    <table>
+    <select id="categoryFilter">
+        <option value="">All Categories</option>
+        <option>Electricity</option>
+        <option>Water</option>
+        <option>WiFi</option>
+        <option>Cleaning</option>
+        <option>Other</option>
+    </select>
 
-        <thead>
+    <select id="priorityFilter">
+        <option value="">All Priority</option>
+        <option>High</option>
+        <option>Medium</option>
+        <option>Low</option>
+    </select>
 
-            <tr>
+    <select id="statusFilter">
+        <option value="">All Status</option>
+        <option>Pending</option>
+        <option>In Progress</option>
+        <option>Resolved</option>
+    </select>
 
-                <th>Name</th>
+</section>
 
-                <th>Category</th>
+<!-- Complaint Table -->
 
-                <th>Priority</th>
+<div class="table-container">
 
-                <th>Status</th>
+<table>
 
-            </tr>
+<thead>
 
-        </thead>
+<tr>
 
-        <tbody id="complaintTable">
+<th>ID</th>
 
-        </tbody>
+<th>Name</th>
 
-    </table>
+<th>Roll No</th>
+
+<th>Department</th>
+
+<th>Category</th>
+
+<th>Priority</th>
+
+<th>Date</th>
+
+<th>Status</th>
+
+<th>Action</th>
+
+</tr>
+
+</thead>
+
+<tbody id="complaintTable">
+
+</tbody>
+
+</table>
+
+</div>
+
+<!-- View Complaint Popup -->
+
+<div class="modal" id="viewModal">
+
+<div class="modal-content">
+
+<span class="close">&times;</span>
+
+<h2>Complaint Details</h2>
+
+<div id="complaintDetails"></div>
+
+</div>
 
 </div>
 
 <script src="js/dashboard.js"></script>
+<script src="js/auth.js"></script>
 
 </body>
 </html>

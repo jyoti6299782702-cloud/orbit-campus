@@ -1,10 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Orbit Campus Admin</title>
@@ -18,52 +15,58 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 
 <body>
 
-<div class="sidebar">
+<header class="header">
 
-<h2>Orbit Campus</h2>
+<h2>
+<i class="fa-solid fa-user-shield"></i>
+Admin Dashboard
+</h2>
 
-<ul>
+<nav>
 
-<li><a href="dashboard.html"><i class="fa-solid fa-chart-line"></i> Dashboard</a></li>
+<a href="dashboard.html">Dashboard</a>
 
-<li><a href="report.html"><i class="fa-solid fa-file-circle-plus"></i> Report</a></li>
+<a href="report.html">New Complaint</a>
 
-<li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+<a href="index.html">Home</a>
 
-</ul>
+</nav>
 
-</div>
+</header>
 
-<div class="main">
+<section class="cards">
 
-<h1>Admin Panel</h1>
-
-<div class="cards">
-
-<div class="card total">
+<div class="card">
 <h3>Total</h3>
 <h1 id="total">0</h1>
 </div>
 
-<div class="card pending">
+<div class="card">
 <h3>Pending</h3>
 <h1 id="pending">0</h1>
 </div>
 
-<div class="card resolved">
+<div class="card">
 <h3>Resolved</h3>
 <h1 id="resolved">0</h1>
 </div>
 
-</div>
+</section>
 
-<div class="table-box">
+<div class="table-container">
+
+<input
+type="text"
+id="search"
+placeholder="Search Complaint">
 
 <table>
 
 <thead>
 
 <tr>
+
+<th>ID</th>
 
 <th>Name</th>
 
@@ -87,9 +90,25 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 
 </div>
 
+<!-- View Modal -->
+
+<div class="modal" id="modal">
+
+<div class="modal-content">
+
+<span id="close">&times;</span>
+
+<h2>Complaint Details</h2>
+
+<div id="details"></div>
+
 </div>
 
+</div>
+<script src="js/auth.js"></script>
 <script src="js/admin.js"></script>
 
+
 </body>
+
 </html>
