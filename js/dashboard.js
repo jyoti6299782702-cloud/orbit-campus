@@ -42,15 +42,7 @@ function loadDashboard(data = complaints){
         ${complaint.status}
         </td>
 
-        <td>
-            <button class="viewBtn" onclick="viewComplaint(${index})">
-            View
-            </button>
-
-            <button class="deleteBtn" onclick="deleteComplaint(${index})">
-            Delete
-            </button>
-        </td>
+        <
 
         </tr>
         `;

@@ -12,34 +12,53 @@ body{
     background:#f4f7fc;
 }
 
-/* Header */
+/* ================= HEADER ================= */
 
-.header{
-    background:#0d6efd;
-    color:#fff;
+header{
+    width:100%;
+    height:80px;
+    background:#0B2E63;
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:18px 40px;
-    box-shadow:0 5px 15px rgba(0,0,0,.15);
+    padding:0 8%;
+    position:sticky;
+    top:0;
+    z-index:1000;
 }
 
-.header h2{
-    font-size:28px;
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
 }
 
-.header nav a{
+.logo i{
+    font-size:32px;
+    color:#FFD54F;
+}
+
+.logo h2{
     color:#fff;
+    font-size:30px;
+}
+
+nav{
+    display:flex;
+    align-items:center;
+    gap:25px;
+}
+
+nav a{
     text-decoration:none;
-    margin-left:20px;
+    color:#fff;
     font-weight:500;
     transition:.3s;
 }
 
-.header nav a:hover{
-    color:#ffd54f;
+nav a:hover{
+    color:#42C76E;
 }
-
 /* Cards */
 
 .cards{
@@ -228,9 +247,16 @@ button{
 
 @media(max-width:768px){
 
-.header{
+header{
     flex-direction:column;
-    gap:15px;
+    height:auto;
+    padding:20px;
+}
+
+nav{
+    flex-wrap:wrap;
+    justify-content:center;
+    margin-top:15px;
 }
 
 .modal-content{
